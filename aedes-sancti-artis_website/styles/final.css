@@ -45,13 +45,13 @@ header div {
   display: grid;
   grid-template: auto / 60% 40%;
 
-  /* making it fixed top  */
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  /* making it fixed top */
+  position: fixed; 
+  top: 0;
+  width: 100%; 
 
   /* adding color to make it not transparent  */
-  background-color: #ffffff;
+  background-color: var(--white); 
 }
 
 /* headerTitleText styles */
