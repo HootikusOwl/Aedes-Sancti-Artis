@@ -15,6 +15,7 @@
 	display: block;
 	line-height: 1.188em;
 	float: left;
+	/* display: grid;	 */
 }
 .slicknav_menu .slicknav_icon {
 	float: left;
