@@ -54,6 +54,11 @@ header div {
   background-color: var(--white); 
 }
 
+/* site logo  */
+img.siteLogo {
+    width: 5%;
+}
+
 /* headerTitleText styles */
 #headerTitleText {
   grid-column: 1 / 2;
