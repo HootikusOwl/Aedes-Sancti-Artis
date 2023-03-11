@@ -111,11 +111,12 @@ main {
 
 /* section styles */
 section {
-  background-color: var(--white);
-  padding: 5em;
-  display: grid;
-  grid-template: auto / 1fr 1fr;
-  justify-items: center;
+    background-color: var(--white);
+    padding: 5em;
+    display: grid;
+    grid-template: auto / 1fr 1fr 2fr 15%;
+    justify-items: center;
+    column-gap: 5%;
 }
 section img {
   padding: 1em;
