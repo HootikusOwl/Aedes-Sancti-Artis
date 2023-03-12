@@ -1,8 +1,8 @@
 <!--
 Author: Juna Roix
 Course: CGS1821.0M1
-Date: 02.05.23
-Assignment: 
+Professor: Pfaff
+Assignment: Final Website Project 
 -->
 
 <!DOCTYPE html>
@@ -11,52 +11,66 @@ Assignment:
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <title>Aedes Sancti Artis</title>
+	    <title>aedes sancti artis</title>
         <link rel="stylesheet" href="styles/final.css">
+        <link rel="stylesheet" href="styles/slicknav.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">        
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/jquery.slicknav.min.js"></script>
 	    <script type="text/javascript">
-    	$(document).ready(function(){ $('#nav_menu').slicknav({prependTo:"#mobile_menu"}); });
+            $(document).ready(function(){
+                $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+            });
         </script>
     </head>
     <body>
         
         <header>
             <div>
-                <h1 id="headerTitleText">Aedes Sancti Artis</h1>
-                <!-- <nav id="mobile_menu"></nav> -->
-                <nav id="nav_menu">
-                    <ul>
-                        <li><a href="index.html" class="current">Home</a></li>
-                        <li><a href="#">Visit</a></li>
-                        <li><a href="#">What's On</a></li>
-                        <li><a href="#">Collection</a></li>
-                        <li><a href="#">Submit</a></li>
-
-                    </ul>
-                </nav>
-            </div>
-            <img id="headerImg"  src="images/wideBanner/monet_sunflowers.png" alt="Claude Monet's Sunflower Bouquet">
+                <img src="images/logo.png" alt="The alchemical symbol for the philosopher's stone with three lines under the triangle inside a circle.">
+                <h1>aedes sancti artis</h1>
+            </div>                                    
+            <nav id="nav_menu">
+                <ul>
+                    <li><a href="index.html" class="current">home</a></li>
+                    <li><a href="collection/index.html">collection</a></li>
+                    <li><a href="calendar/index.html">calendar</a></li>                        
+                    <li><a href="submit/index.html">request</a></li>
+                </ul>
+            </nav>                                      
         </header>  
         
         
         <main>
-            <section>
-                <img src="images/paulKlee_catAndBird2.png" alt="">
+            <section>                
                 <div id="welcome">
-                    <h2>Welcome</h2>
-                    <p>This website is a digital representation of an imaginary art museum, featuring galleries on specific artists and artistic movements.</p>
-                    <p>An opportunity to implement my ever-developing knowledge on web development, I intend to use this in my programming portfolio by making it as professional as possible. </p>
-                    <p>Please feel free to share any advice that may help me improve. Thank you for visiting this humble little section of the world wide web.</p>
+                    <h2>welcome</h2>                
+                    <p>This website is a digital representation of an imaginary art museum, featuring galleries on specific artists and artistic movements.<br>
+                    An opportunity to implement my ever-developing knowledge on web development, I intend to use this in my programming portfolio by making it as professional as possible.<br>
+                    Please feel free to share any advice that may help me improve. Thank you for visiting this humble little section of the world wide web.</p>
                 </div>
-            </section>
-            
-            
-            
+
+                <div>
+                    <h2>about us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in dolores odio facilis blanditiis esse vero natus voluptate officiis animi asperiores accusantium fugiat, a optio ipsam? Fugit consequuntur sequi nesciunt!</p>
+                </div>
+
+                <div>
+                    <h2>spotlight</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in dolores odio facilis blanditiis esse vero natus voluptate officiis animi asperiores accusantium fugiat, a optio ipsam? Fugit consequuntur sequi nesciunt!</p>
+                </div>
+
+                <div>
+                    <h2>event</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni blanditiis iste quaerat molestias vitae doloribus nemo sequi nulla provident mollitia, necessitatibus quos pariatur illum facilis, ipsum repudiandae nihil cum quae?</p>
+                </div>
+            </section>                                    
         </main>
         
         <footer>
-            <p>&copy; 2023 Aedes Sancti Artis</p>
+            <p>&copy; 2023 aedes sancti artis</p>
         </footer>
     </body>
 </html>

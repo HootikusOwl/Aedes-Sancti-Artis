@@ -1,16 +1,24 @@
 /*
 * Author: Juna Roix
 * Course: CGS1821.0M1
-* Date: 02.05.23
-* Assignment: 
+* Professor: Pfaff
+* Assignment: Final Website Project 
 */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 
 /* root styles */
 :root {
-    --white: #ffffff;
-    --light-gray: #ebebf3;
+    --headerBackground: #ffffff9e;
+    --light-gray: hsl(240, 4.8%, 95.9%);
     --gray: #cbcbd0;
     --blue: #0060df;
+    --headerText: #000000 ;
+    --white: #ffffff;    
 }
 
 /* universal selector styles */
@@ -19,142 +27,165 @@
     padding: 0;
 }
 
+
 /* body styles */
 body {
     background-color: var(--light-gray);
     width: 100vw;
-    display: grid;
-    grid-template: 35% 50% 15%;
-    grid-template-areas: 
-        "header"
-        "main"
-        "footer";
-    /* display: grid;
-    grid-template: repeat(4, auto) / 3fr 8fr;
-    grid-column-gap: 3%; */
+    display: grid;      
+    grid-template: auto 1fr auto / repeat(12, 1fr);   
+    row-gap: 3em;
+    /* font-family: 'Cormorant Garamond'; */
 }
-
-
-
 
 
 /* header styles */
-header {
-    grid-area: header;
-    width: 100%;
-    /* grid-row: 1 / 2;
-    grid-column: 1 / 3; */
+header {    
+    grid-column: 2 / 12;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template: auto / subgrid;
+    background-color: var(--light-gray);
+    margin-top: 1em;
 }
 header div {
+    grid-row: 1 / 2;
+    grid-column: 1 / 7;
     display: grid;
-    grid-template: auto / 60% 40%;
+    grid-template: auto / repeat(12, [div-col-start] 1fr);
+    align-items: center;
+}
+header div img {
+    width: 90px;    
+    grid-row: 1 / 2;
+    grid-column: div-col-start 1 / 3;
+    justify-self: center;
+}
+header div h1 {    
+    grid-row: 1 / 2;
+    grid-column: div-col-start 3 / 13;
+    justify-self: start;
 }
 
-
-/* headerTitleText styles */
-#headerTitleText {
-    grid-column: 1 / 2;
-    align-self: center;
-    text-indent: 5em;
-
-}
 
 /* navigation bar styles */
 #nav_menu {
     width: 100%;
-    grid-column: 2 / 3;
+    grid-column: 7 / 11;
 }
-#nav_menu ul {
-	list-style: none;
-	position: relative;
-    display: grid;
-    grid-template: auto / repeat(5, 20%);
+#nav_menu ul {    
+	display: grid;
+    grid-template: auto / repeat(4, [navbar-col-start] 25%);    
+    list-style: none;                
 }
 #nav_menu ul li {
     width: 100%;
 }
 #nav_menu ul li a {
-	text-align: center;
 	display: block;
-	padding: 2em 0;
+    text-align: center;
     text-decoration: none;
-	
-	color: black;
+	color: var(--black);  
+    font-size: 120%;
+    padding: 2.2em 0;
 }
 #nav_menu ul li a.current {
 	font-weight: bold;
 }
 #nav_menu ul li a:hover, #nav_menu ul li a:focus {
-	background-color: var(--white);
+	/* background-color: var(--white); */
+    text-decoration: underline;
 }
-
-
-
 
 
 /* main styles */
 main {
-    grid-area: main;
-    padding: 10em;
+    grid-row: 2 / 3;
+    grid-column: 2 / 12;
+    display: grid;     
+    grid-template: auto / subgrid;
 }
-
 
 /* section styles */
 section {
-    background-color: white;
-    padding: 5em;
+    grid-column: 1 / 11;
     display: grid;
-    grid-template: auto / 1fr 1fr;
+    grid-template: 1fr 1fr / [section-col-start] 1fr 1fr 2fr 15%;        
     justify-items: center;
+    column-gap: 2%;
 }
-section img {
+
+section div {
+    box-shadow: 20px 20px 28px hsla(0, 0%, 0%, 0.15);
+}
+
+section div > *{
+    /* background-color does not change both and I don't know why */
+    background-color: white;   
+    border-radius: 2px;
+}
+
+section div h2 {
+    margin-bottom: .5em;
+    padding: .5em;
+}
+section div p { 
     padding: 1em;
-    margin: 1em;
-    grid-column: 1 / 2;
+    /* font-family: 'Times New Roman', Times, serif; */
 }
-
-/* welcome styles */
-#welcome {
-    padding: 5em;
-    grid-column: 2 / 3;
-}
-#welcome h2 {
-    margin-bottom: 2em;
-}
-#welcome p {
-    margin-bottom: 1em;
-}
-
-
-
 
 
 /* footer styles */
 footer {
-	clear: both;
-	padding: .9375em 3.3333%;
-    background-color: var(--light-gray);
-    grid-area: footer;
-    margin: 4em;
+	grid-row: 3 / 4;
+    grid-column: 1 / 13;
+	padding: 2em 0;
+    background-color: var(--white);
+    box-shadow: 0 0px 28px hsla(0, 0%, 0%, 0.15);
 } 
 footer p {
 	text-align: center;
     font-size: 85%;
     color: black;
+    font-weight: bold;
 }
 
 
-
-#mobile_menu {
-	display: none;
-}
 /* Media Queries */
 @media only screen and (max-width: 900px) {
 
 }
 @media only screen and (max-width: 767px) {
     
+    /* header styles */
+    /* header {
+        padding-top: .5em;
+    }
+    header img {
+        grid-column: col-start 1 / 4 !important;
+        grid-row: row-start 2 / 3 !important;        
+        justify-self: center !important;
+        margin-left: .2em !important;
+        width: 65px !important;
+    }
+    header h1 {
+        grid-column: col-start 4 / 13 !important;
+        grid-row: row-start 2 / 3 !important; 
+        justify-self: center !important;
+
+    } */
+    
+    /* navigation bar styles */
+    /* #nav_menu_small {
+        grid-row: row-start 3 / 4 !important;
+        grid-column: col-start / span 12 !important;
+    }
+    #nav_menu_small ul li a {
+        padding: 1em 0 !important;
+        font-size: 100% !important;
+    }     */
+    
 }
 @media only screen and (max-width: 467px) {
-
+    
 }
