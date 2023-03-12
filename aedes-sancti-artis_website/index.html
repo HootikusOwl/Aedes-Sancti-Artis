@@ -7,74 +7,87 @@ Assignment:
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aedes Sancti Artis</title>
+    <link rel="stylesheet" href="styles/final.css" />
+    <link rel="stylesheet" href="styles/slicknav.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#nav_menu").slicknav({ prependTo: "#mobile_menu" });
+      });
+    </script>
+  </head>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <title>Aedes Sancti Artis</title>
-        <link rel="icon" type="image/x-icon" href="/aedes-sancti-artis_website/images/Art Site Logo.png">
-        <link rel="stylesheet" href="styles/final.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="js/jquery.slicknav.min.js"></script>
-	    <script type="text/javascript">
-    	$(document).ready(function(){ $('#nav_menu').slicknav({prependTo:"#mobile_menu"}); });
-        </script>
-    </head>
-    <body>
-        
-        <header>
-            <div class="headerDiv">                
-                <h1 id="headerTitleText"><img src="images/Art Site Logo.png" alt="siteLogo" class="siteLogo">Aedes Sancti Artis</h1>
-                <!-- <nav id="mobile_menu"></nav> -->
-                <nav id="nav_menu">
-                    <ul>
-                        <li><a href="index.html" class="current">Home</a></li>
-                        <li><a href="#">Visit</a></li>
-                        <li><a href="#">What's On</a></li>
-                        <li><a href="#">Collection</a></li>
-                        <li><a href="#">Submit</a></li>
+  <body>
+    <header class="grid12">
+      <img
+        src="images/Art Site Logo.png"
+        alt="The alchemical symbol for the philosopher's stone with three lines under the triangle inside a circle."
+      />
+      <h1 id="headerTitleText">Aedes Sancti Artis</h1>
+      <nav id="nav_menu">
+        <ul>
+          <li><a href="index.html" class="current">Home</a></li>
+          <li><a href="collection/index.html">Collection</a></li>
+          <li><a href="calendar/index.html">Calendar</a></li>
+          <li><a href="submit/index.html">Submit</a></li>
+        </ul>
+      </nav>
+    </header>
 
-                    </ul>
-                </nav>
-            </div>
-            <img id="headerImg"  src="images/wideBanner/monet_sunflowers.png" alt="Claude Monet's Sunflower Bouquet">
-        </header>  
-        
-        
-        <main>
-            <section class="mainSection">
-                <!-- <img src="images/paulKlee_catAndBird2.png" alt="">
-                <div id="welcome">
-                    <h2>Welcome</h2>
-                    <p>This website is a digital representation of an imaginary art museum, featuring galleries on specific artists and artistic movements.</p>
-                    <p>An opportunity to implement my ever-developing knowledge on web development, I intend to use this in my programming portfolio by making it as professional as possible. </p>
-                    <p>Please feel free to share any advice that may help me improve. Thank you for visiting this humble little section of the world wide web.</p>
-                </div> -->
+    <main class="grid12">
+      <section>
+        <div id="welcome">
+          <h2>Welcome</h2>
+          <p>
+            This website is a digital representation of an imaginary art museum,
+            featuring galleries on specific artists and artistic movements.<br />
+            An opportunity to implement my ever-developing knowledge on web
+            development, I intend to use this in my programming portfolio by
+            making it as professional as possible.<br />
+            Please feel free to share any advice that may help me improve. Thank
+            you for visiting this humble little section of the world wide web.
+          </p>
+        </div>
 
-                <div>
-                    <h1>Welcome</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus vero fuga. At, impedit optio tempore eaque quae ipsum hic provident corrupti illum magni excepturi non tempora, dicta porro perferendis.</p>                    
-                </div>
+        <div>
+          <h2>About us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in
+            dolores odio facilis blanditiis esse vero natus voluptate officiis
+            animi asperiores accusantium fugiat, a optio ipsam? Fugit
+            consequuntur sequi nesciunt!
+          </p>
+        </div>
 
-                <div>
-                    <h1>About us</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ad facere corrupti ipsa quisquam assumenda reiciendis est minus consectetur perspiciatis quos veniam laboriosam, illum non blanditiis ea cumque nobis vitae!</p>                    
-                </div>
+        <div>
+          <h2>Spotlight</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in
+            dolores odio facilis blanditiis esse vero natus voluptate officiis
+            animi asperiores accusantium fugiat, a optio ipsam? Fugit
+            consequuntur sequi nesciunt!
+          </p>
+        </div>
 
-                <div>
-                    <h1>Spotlight</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ad facere corrupti ipsa quisquam assumenda reiciendis est minus consectetur perspiciatis quos veniam laboriosam, illum non blanditiis ea cumque nobis vitae!</p>                    
-                </div>
+        <div>
+          <h2>Event</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
+            blanditiis iste quaerat molestias vitae doloribus nemo sequi nulla
+            provident mollitia, necessitatibus quos pariatur illum facilis,
+            ipsum repudiandae nihil cum quae?
+          </p>
+        </div>
+      </section>
+    </main>
 
-                <div>
-                    <h1>Events</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ad facere corrupti ipsa quisquam assumenda reiciendis est minus consectetur perspiciatis quos veniam laboriosam, illum non blanditiis ea cumque nobis vitae!</p>                    
-                </div>
-            </section>
-        </main>
-        
-        <footer>
-            <p>&copy; 2023 Aedes Sancti Artis</p>
-        </footer>
-    </body>
+    <footer class="grid12">
+      <p>&copy; 2023 Aedes Sancti Artis</p>
+    </footer>
+  </body>
 </html>
